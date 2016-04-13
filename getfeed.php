@@ -6,6 +6,7 @@
   $file_name = "cache.txt";
   $url = "https://api.twitter.com/1.1/search/tweets.json";
   $getField = "?q=%23Paris&result_type=recent";
+  //$getField = "?geocode=58.8202499,25.5864935,100km&result_type=mixed&count=100";
   $requestMethod = "GET";
 
   $file_data = json_decode(file_get_contents($file_name));//faili sisu tagasi objektiks
