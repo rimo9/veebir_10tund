@@ -1,7 +1,13 @@
+var $grid;
+
 $(function(){
   //laetud
 
   getTweets();
+
+  $grid = $('#content').isotope({
+    itemSelector: ".item" //üks kast
+  });
 });
 
 function getTweets(){
@@ -30,5 +36,9 @@ function printTweets(newTweets){
       '<p>'+tweet.text+'</p>'+
     '</div>';
   });
-  $("#content").append($(html));
+  //$("#content").append($(html));
+  var tweetsHTML = $(html);
+  $grid.prepend(tweetsHTML)
+       .isotope('prepended', tweetsHTML)
+       .isotope('layout');
 }
