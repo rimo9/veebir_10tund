@@ -25,7 +25,7 @@ function printTweets(newTweets){
   $(newTweets).each(function(i, tweet){
     //html += '<div>'+i+'</div>';
     html+='<div class="item">'+
-      '<div class="profile-image" style="background-image:url('+tweet.user.profile_image_url+')"></div>'+
+      '<div class="profile-image" style="background-image:url('+tweet.user.profile_image_url.replace("_normal", "")+')"></div>'+
       '<p>'+tweet.user.name+'</p>'+
       '<p>'+tweet.text+'</p>'+
     '</div>';
